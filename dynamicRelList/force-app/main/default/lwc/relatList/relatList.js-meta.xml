@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata" fqn="RelatedList">  
+    <apiVersion>51.0</apiVersion>  
+    <isExposed>true</isExposed>  
+    <targets>  
+        <target>lightning__RecordPage</target>  
+    </targets>  
+    <targetConfigs>  
+        <targetConfig targets="lightning__RecordPage">  
+            <property name="apiNameOfObject" type="String" label="Enter API name of related sObject" description="Enter the title"/>  
+            <property name="relation" type="String" label="Enter relation" description="Enter the object name"/>  
+            <property name="fieldsToFetch" type="String" label="Enter field API names separated by commas" description="Enter the parent field API Name"/>  
+            <property name="validation" type="String" label="Enter condition(s) for filter" description="Enter the field name"/>  
+            
+        </targetConfig>  
+    </targetConfigs>  
+</LightningComponentBundle>  

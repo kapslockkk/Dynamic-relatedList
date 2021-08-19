@@ -1,0 +1,27 @@
+<template>        
+    <lightning-card title={apiNameOfObject} icon-name="standard:record">    
+        <div class="slds-m-around_medium">  
+           
+            <div if:true={showSpinner}>
+                <lightning-spinner alternative-text="Loading" size="large"></lightning-spinner>
+            </div>
+
+              <div if:true={records}> 
+                   
+                <template for:each={records} for:item="rec">      
+                    <div key={rec.Id} class="slds-box">     
+                       
+                        <!-- using record form to show the output -->
+                        
+                        <lightning-record-form record-id={rec.Id}   
+                                               object-api-name={apiNameOfObject}   
+                                               layout-type="Compact"   
+                                               mode="view"  
+                                               columns="2">  
+                        </lightning-record-form>    
+                    </div>                        
+                </template>    
+            </div>    
+        </div>    
+    </lightning-card>        
+</template>  
